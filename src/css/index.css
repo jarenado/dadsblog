@@ -1,0 +1,24 @@
+@import "https://unpkg.com/open-props";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Oxygen:wght@300&family=Roboto:wght@300&display=swap');
+
+body {
+  background: #e7e4d3;
+}
+
+h5 {
+  font-family: Lora;
+}
+.card {
+  font-size: 2em;
+  border-radius: var(--radius-2);
+  padding: var(--size-fluid-3);
+  box-shadow: var(--shadow-3);
+
+  &:hover {
+    box-shadow: var(--shadow-4);
+  }
+
+  @media (--motionOK) {
+    animation: var(--animation-fade-in);
+  }
+}
