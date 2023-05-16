@@ -3,6 +3,9 @@
 
 body {
   background: #f3f6dc;
+  max-width: 50em;
+}
+main {
 }
 
 h5 {
