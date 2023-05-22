@@ -1,8 +1,8 @@
 ---
-title: Post title
+title: Post title for 2
 layout: post.njk
 tags: post
-foo: This here
+foo: This here 2
 
 ---
 

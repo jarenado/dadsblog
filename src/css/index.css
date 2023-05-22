@@ -3,7 +3,6 @@
 
 body {
   background: #f3f6dc;
-  max-width: 50em;
 }
 main {
 }
@@ -25,4 +24,21 @@ h5 {
   @media (--motionOK) {
     animation: var(--animation-fade-in);
   }
+}
+.container-slide {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.media-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+
+  overflow: x;
+  overscroll-behavior: inline contain;
+}
+.media-element {
+  padding: var(--size-3);
+  background: var(--surface-2);
 }
