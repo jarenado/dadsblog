@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <main>
+    <div style="border: thin solid blue;">
+      {%- for post in collections.insta -%}
+        {{post.url }}
+      {%- endfor -%}
+    </div>
+
+    <div style="border: thin solid blue;">
+      {%- for post in collections.post -%}
+        {{post.url }}
+      {%- endfor -%}
+    </div>
+
+    {{ content | safe }}
+  </main>
+</body>
+</html>
