@@ -1,22 +1,24 @@
-<html>
-<head>
-  <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-  <main>
-    <div style="border: thin solid blue;">
-      {%- for post in collections.insta -%}
-        {{post.url }}
-      {%- endfor -%}
-    </div>
+<div style="border: 3px solid green;">
+  <h3>Insta</h3>
+  <p>TODO:// Slider?????</p>
+  {%- for post in collections.insta -%}
+    {{post.url }}
+  {%- endfor -%}
+</div>
 
-    <div style="border: thin solid blue;">
-      {%- for post in collections.post -%}
-        {{post.url }}
-      {%- endfor -%}
-    </div>
+<div style="border: 3px solid red;">
+  <h3>Posts</h3>
+  <p>TODO:// List</p>
+  {%- for post in collections.post -%}
+    {{post.url }}
+  {%- endfor -%}
+</div>
 
-    {{ content | safe }}
-  </main>
-</body>
-</html>
+<div style="border: 3px solid yellow;">
+  <h3>Nasa apod</h3>
+  <p>TODO:// image, styling</p>
+  {%- for post in collections.post -%}
+    {{post.url }}
+  {%- endfor -%}
+</div>
+
