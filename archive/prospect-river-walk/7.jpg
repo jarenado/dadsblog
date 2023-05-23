@@ -1,0 +1,21 @@
+---
+title: Prospect Park River Walk
+imageURL: './20230330_141855.jpg'
+date: Last Modified
+tags: ["Photos"]
+---
+
+
+<div class="glider-contain">
+  <div class="glider">
+		<style>.glider-contain{width: 750px;} .glider img { width: 42em; height: 25em; }</style>
+		<div> {% image "./20230330_141855.jpg", 'image' %}</div>
+		<div> {% image "./20230330_141855.jpg", 'image' %}</div>
+		<div> {% image "./20230330_141855.jpg", 'image' %}</div>
+		<div> {% image "./20230330_141855.jpg", 'image' %}</div>
+  </div>
+
+  <button aria-label="Previous" class="glider-prev">«</button>
+  <button aria-label="Next" class="glider-next">»</button>
+  <div role="tablist" class="dots"></div>
+</div>

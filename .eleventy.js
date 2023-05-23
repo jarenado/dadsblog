@@ -4,6 +4,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/assets/img/");
   eleventyConfig.addPassthroughCopy("src/assets/css/index.css");
 
   eleventyConfig.addShortcode("image", async function(src, alt, sizes) {

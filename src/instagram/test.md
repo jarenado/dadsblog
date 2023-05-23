@@ -1,7 +1,7 @@
 ---
 title: "Insta one"
 layout: insta.njk
-tags: insta
+tags: 
 foo: This here is insta
 url: https://instagram.com
 

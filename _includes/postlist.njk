@@ -3,7 +3,7 @@
   <div class="media-slider snaps-inline">
   {%- for post in collections.insta -%}
     <div class="media-element">
-      <a href="{{post.data.url}}"> {% image 'src/assets/img/minion.jpeg','', "(max-width: 1em) 10vw, 20vw" %} </a>
+      <a href="{{post.data.url}}"> <img src="/assets/img/{{post.data.imageURL}}" /></a>
     </div>
   {%- endfor -%}
   </div>
@@ -18,22 +18,24 @@
   </ul>
 </div>
 
+
+{#-
+
 <div>
   <h3>Nasa APOD</h3>
   <div class="media-slider snaps-inline">
-  {%- for post in collections.insta -%}
     <div class="media-element">
-      <a href="{{post.data.url}}"> {% image apod.hdurl ,'', "(max-width: 1em) 10vw, 20vw" %} </a>
+      <a href="{{apod.hdurl}}"> {% image apod.hdurl ,'', "(max-width: 1em) 10vw, 20vw" %} </a>
       <caption>{{apod.copyright}} {{apod.date}}</caption>
     </div>
-  {%- endfor -%}
   </div>
 </div>
+#}
 
 <div>
   <h3>All</h3>
   <ul>
-  {%- for post in collections.post -%}
+  {%- for post in collections.posts -%}
     <li><a href="{{post.url}}">{{post.data.title}}</a></li>
   {%- endfor -%}
   </ul>
