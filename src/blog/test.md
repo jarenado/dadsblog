@@ -1,7 +1,9 @@
 ---
 title: Post title
 layout: post.njk
-tags: post
+tags: 
+  - post
+  - featured
 foo: This here
 
 ---

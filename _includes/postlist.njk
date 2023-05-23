@@ -1,25 +1,99 @@
-<div style="border: 3px solid green;">
+<div>
   <h3>Insta</h3>
-  <p>TODO:// Slider?????</p>
-  {% image 'src/assets/img/minion.jpeg','', "(max-width: 1em) 10vw, 20vw" %}
+  <style>
+  @import "https://unpkg.com/open-props/normalize.min.css";
+  @import "https://unpkg.com/open-props";
+
+  .media-slider::-webkit-scrollbar {
+    width: 2em;
+    height: 1.2em;
+  }
+
+.media-slider::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 100vw;
+}
+
+.media-slider::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 100vw;
+}
+
+.media-slider::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+.media-slider {
+  /*min-height: 200px;*/
+  display: grid;
+  gap: var(--size-3);
+  grid-auto-flow: column;
+  grid-auto-columns: 15%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  padding-bottom: 20px;
+}
+
+.media-element {
+  display: grid;
+  /*width: 220px;*/
+/*padding: var(--size-1);*/
+/*padding-left: 20px !important;*/
+  gap: var(--size-2);
+  grid-template-rows: min-content;
+  box-shadow: var(--shadow-3);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+  </style>
+  <div class="media-slider snaps-inline">
   {%- for post in collections.insta -%}
-    {{post.url }}
+    <div class="media-element">
+      <a href="{{post.data.url}}"> {% image 'src/assets/img/minion.jpeg','', "(max-width: 1em) 10vw, 20vw" %} </a>
+    </div>
   {%- endfor -%}
+  </div>
 </div>
 
-<div style="border: 3px solid red;">
-  <h3>Posts</h3>
-  <p>TODO:// List</p>
+<div>
+  <h3>Featured Posts</h3>
+  <ul>
+  {%- for post in collections.featured -%}
+    <li><a href="{{post.data.url}}">{{post.data.title}}</a></li>
+  {%- endfor -%}
+  </ul>
+</div>
+
+<div>
+  <h3>Nasa APOD</h3>
+  <div class="media-slider snaps-inline">
+  {%- for post in collections.insta -%}
+    <div class="media-element">
+      <a href="{{post.data.url}}"> {% image apod.hdurl ,'', "(max-width: 1em) 10vw, 20vw" %} </a>
+      <caption>{{apod.copyright}} {{apod.date}}</caption>
+    </div>
+  {%- endfor -%}
+  </div>
+</div>
+
+<div>
+  <h3>All</h3>
+  <ul>
   {%- for post in collections.post -%}
-    {{post.url }}
+    <li><a href="{{post.data.url}}">{{post.data.title}}</a></li>
   {%- endfor -%}
+  </ul>
 </div>
-
-<div style="border: 3px solid yellow;">
-  <h3>Nasa apod</h3>
-  <p>TODO:// image, styling</p>
-  {%- for post in collections.post -%}
-    {{post.url }}
-  {%- endfor -%}
-</div>
-

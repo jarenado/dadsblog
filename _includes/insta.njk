@@ -1,8 +1,6 @@
-<html>
-<head>
-  <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-  {{ content | safe }}
-</body>
-</html>
+---
+layout: base.njk
+---
+
+<p>this one is insta template embedded in base template</p>
+{{ content | safe }}

@@ -1,9 +1,6 @@
-<html>
-<head>
-  <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-  Post here
-  {{ content | safe }}
-</body>
-</html>
+---
+layout: base.njk
+---
+
+{{ content | safe }}
+<p>Post</p>
