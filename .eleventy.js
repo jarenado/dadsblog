@@ -3,9 +3,8 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("src/css/*");
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addWatchTarget("src/assets");
+  eleventyConfig.addPassthroughCopy("src/assets/css/index.css");
 
   eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
     let metadata = await Image(src, {
