@@ -29,6 +29,7 @@
 
     <link rel="stylesheet" href="/assets/css/index.css" />
     <!-- You should properly set the path from the main file. -->
+
     <style>
       header {
         background: lightsteelblue;
@@ -77,5 +78,21 @@
         {{ content | safe}}
       </main>
     </div>
+
+    <script type="text/javascript">
+      var elements = document.getElementsByTagName('a');
+      var mainImg = document.getElementById('mainImg')
+      const displayNewImage = () => {
+        mainImg.src = event.target.src
+        console.log(event.target.src)
+      }
+      for(var i = 0, len = elements.length; i < len; i++) {
+          elements[i].onclick = function (event) {
+            displayNewImage(event)
+          }
+      }
+      const transition = document.startViewTransition(() => displayNewImage());
+
+    </script>
   </body>
 </html>
