@@ -81,6 +81,9 @@
     <script type="text/javascript">
       var elements = document.getElementsByTagName('a');
       var mainImg = document.getElementById('mainImg')
+      window.addEventListener('beforeunload',(e) => {
+        document.body.style.opacity = 0
+      } )
       const displayNewImage = () => {
         mainImg.src = event.target.src
         console.log(event.target.src)
