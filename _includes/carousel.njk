@@ -5,13 +5,14 @@ layout: base.njk
 <div>
   <style>
   .carousely {
-    display: flex;
-        width: 100%;
-    margin: 0 auto;
   }
   .thumbs {
     display: block;
     width: 10%;
+    max-width: 15%;
+  }
+  .thumbs.column {
+    max-width: 20% !important;
   }
   .thumbs img {
     display: block;
