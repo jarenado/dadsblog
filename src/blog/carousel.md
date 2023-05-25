@@ -1,6 +1,7 @@
 ---
-title: Post title
+title: Carousel draft
 layout: post.njk
+date: Last Modified
 tags:
   - post
   - featured
