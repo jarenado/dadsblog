@@ -8,6 +8,11 @@ body {
   width: 50%;
   font-size: 1.3em;
 }
+.post-section {
+  margin-top: 20px;
+  box-shadow: var(--shadow-3);
+  padding: 20px;
+}
 .postlist {
   list-style: none;
 }
@@ -49,7 +54,7 @@ body {
   /*padding-left: 20px !important;*/
   gap: var(--size-2);
   grid-template-rows: min-content;
-  box-shadow: var(--shadow-3);
+  /*box-shadow: var(--shadow-3);*/
   border-radius: 10px;
   background: var(--surface-2);
 }

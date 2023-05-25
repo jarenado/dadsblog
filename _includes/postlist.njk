@@ -1,15 +1,4 @@
-<div>
-  <h3>Insta</h3>
-  <div class="media-slider snaps-inline">
-  {%- for post in collections.insta -%}
-    <div class="media-element">
-      <a href="{{post.data.url}}"> <img src="/assets/img/{{post.data.imageURL}}" /></a>
-    </div>
-  {%- endfor -%}
-  </div>
-</div>
-
-<div>
+<div class="post-section">
   <h3>Featured Posts</h3>
   <ul class="postlist">
   {%- for post in collections.featured | reverse -%}
@@ -22,6 +11,16 @@
   </ul>
 </div>
 
+<div style="width: 95%;" class="post-section">
+  <h3>Insta</h3>
+  <div class="media-slider snaps-inline">
+  {%- for post in collections.insta -%}
+    <div class="media-element">
+      <a href="{{post.data.url}}"> <img src="/assets/img/{{post.data.imageURL}}" /></a>
+    </div>
+  {%- endfor -%}
+  </div>
+</div>
 
 {#-
 
@@ -36,9 +35,9 @@
 </div>
 #}
 
-<div>
+<div class="post-section">
   <h3>All</h3>
-  <ul>
+  <ul class="postlist">
   {%- for post in collections.posts | reverse -%}
     <li><a href="{{post.url}}">{{post.data.title}}</a></li>
   {%- endfor -%}
