@@ -1,13 +1,14 @@
 ---
 title: Post title
 layout: post.njk
-tags: 
+tags:
   - post
   - featured
 foo: This here
 
 ---
 
-## This is the header
+## Post test title
 
-Stuff here
+{% include "carousel.njk" %}
+
