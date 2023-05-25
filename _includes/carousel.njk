@@ -5,6 +5,10 @@ layout: base.njk
 <div>
   <style>
   .carousely {
+    max-width: 60%;
+    border: 2px solid blue;
+    border-radius: 7px;
+    margin-top: 50px;
   }
   .thumbs {
     display: block;
@@ -12,7 +16,8 @@ layout: base.njk
     max-width: 15%;
   }
   .thumbs.column {
-    max-width: 20% !important;
+    max-width: 23% !important;
+    padding-top: 5px;
   }
   .thumbs img {
     display: block;
@@ -22,10 +27,11 @@ layout: base.njk
   }
   .carousely figure {
     position: relative;
+    border-radius: 7px;
   }
   </style>
 
-  <div class="carousely">
+  <div class="container carousely">
     {{content | safe}}
   </div>
 </div>

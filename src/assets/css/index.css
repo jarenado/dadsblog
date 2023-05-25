@@ -1,5 +1,16 @@
 @import "https://unpkg.com/open-props";
 
+body {
+  background: #e7e4d3;
+}
+
+.container {
+  width: 50%;
+  font-size: 1.3em;
+}
+.postlist {
+  list-style: none;
+}
 .media-slider::-webkit-scrollbar {
   width: 2em;
   height: 1.2em;
