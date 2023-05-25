@@ -72,10 +72,15 @@
         </div>
       </div>
     </header>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Roboto:wght@300&display=swap');
+			@import "https://www.nerdfonts.com/assets/css/webfont.css"
+		</style>
     <div class="container">
       <main>
         {{ content | safe}}
       </main>
+        {% include "footer.njk" %}
     </div>
 
     <script type="text/javascript">
