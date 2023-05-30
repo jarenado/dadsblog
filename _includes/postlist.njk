@@ -1,6 +1,30 @@
+
+<div class="post-section">
+  <h3>Spelling Bee</h3>
+  <ul class="postlist">
+  {{bees|dump}}
+  <span><strong>{{bees.yesterday.centerLetter}}</strong></span>
+  {%- for bee in bees.yesterday.outerLetters -%}
+    <span>{{bee}}</span>
+  {%- endfor -%}
+  <h2>Pangrams</h2>
+  {%- for pangram in bees.yesterday.pangrams -%}
+  <li>{{pangram}}</li>
+  {%- endfor -%}
+
+  <h2>Answers</h2>
+  {%- for answer in bees.yesterday.answers -%}
+  <li>{{answer}}</li>
+  {%- endfor -%}
+  </ul>
+  <ul>
+  </ul>
+</div>
+
 <div class="post-section">
   <h3>Featured Posts</h3>
   <ul class="postlist">
+  {{collections|log}}
   {%- for post in collections.featured | reverse -%}
   <li class="post">
     <a href="{{post.url}}">{{post.data.title}} | ({{post.date.toUTCString()}})</a>
